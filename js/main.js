@@ -71,7 +71,9 @@ var myArray = [
 
 
 
-  var flipCard = function(cardId){
+  var flipCard = function(){
+
+  	cardId =  this.getAttribute(data-id);
   	  //use console to access card 
      // console.log("User flipped" + cards[cardId]);
       // Use the push method to add the card.
@@ -83,6 +85,7 @@ var myArray = [
 
      // checkForMatch();
 
+
      console.log("User flipped " + this.rank);
 
      cardsInPlay.push(this.rank);
@@ -93,8 +96,14 @@ var myArray = [
   };
 
 
+var createBoard = function(){
+   for (var i = 0; i < myArray.length; i++){
+   	 var cardElement = document.createElement('img');
+   	 cardElement[i].setAttribute(src, "images/back.png");
+   	 addEventListener().appendChild(cardElement[i])
+   }
+};
 
-
-
+createBoard();
 
 
